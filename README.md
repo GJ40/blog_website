@@ -80,3 +80,7 @@ Add a name and comment in the provided fields to submit a comment for each post.
 - List.js: This JavaScript library is used to implement the search functionality for blog posts.
 
 - CDN: https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js
+
+### Live Link
+
+- The project is live on github pages [click here](https://gj40.github.io/blog_website/).
