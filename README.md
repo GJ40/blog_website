@@ -75,11 +75,15 @@ Click on any blog post title to be redirected to the post's full content on post
 
 Add a name and comment in the provided fields to submit a comment for each post.
 
+---
+
 ### Libraries Used
 
 - List.js: This JavaScript library is used to implement the search functionality for blog posts.
 
 - CDN: https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js
+
+---
 
 ### Live Link
 
