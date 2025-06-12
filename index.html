@@ -1,3 +1,4 @@
+<!-- Updated index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,14 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ThoughtSpot Blog</title>
     <link rel="stylesheet" href="styles.css" />
-    <!-- ✅ Add List.js CDN here -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
 </head>
 
 <body>
     <header>
         <h1>ThoughtSpot Blog</h1>
-        <input class="search" placeholder="Search blog posts..." />
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -22,8 +21,17 @@
     </header>
 
     <main id="blog-list">
-        <div class="list"></div>
+        <div class="search-container">
+            <input class="search" placeholder="Search blog posts by title..." />
+            <button class="sort" data-sort="title">Sort A-Z</button>
+        </div>
+
+        <div class="list">
+            <!-- List.js will target this container -->
+            <!-- Blog posts inserted dynamically here -->
+        </div>
     </main>
+
 
     <footer>
         <p>&copy; 2025 ThoughtSpot Blog</p>

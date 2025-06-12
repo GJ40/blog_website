@@ -45,6 +45,7 @@ body {
 
   .list{
     text-align: center;
+    margin-top: 1rem;
   }
   
   .blog-post {
@@ -116,3 +117,47 @@ body {
     font-size: 0.85rem;
   }
   
+  .search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-container input.search {
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: none;
+  width: 250px;
+}
+
+.search-container button.sort {
+  background-color: #69b8f5;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+}
+
+.search-container button.sort:hover {
+  background-color: #56a7e0;
+}
+
+.img-container{
+  display: flex;
+  justify-content: center;
+}
+
+.post-title{
+  font-size: xx-large;
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}

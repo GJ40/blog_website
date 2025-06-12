@@ -10,8 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
   
     container.innerHTML = `
       <article class="blog-post">
-        <img src="${post.image}" alt="${post.title}" />
-        <h2>${post.title}</h2>
+        <div class="img-container">
+          <img src="${post.image}" alt="${post.title}" />
+        </div>
+        <h2 class="post-title">${post.title}</h2>
         <p class="date">${post.date}</p>
         <p>${post.content.replace(/\n/g, "<br>")}</p>
   

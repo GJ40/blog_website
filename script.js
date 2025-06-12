@@ -34,7 +34,7 @@ const blogPosts = [
         id: "post2",
         title: "Nietzsche's Take on Power and Abuse",
         date: "Published on April 21, 2025",
-        image: "https://ethics.org.au/wp-content/uploads/2019/04/freidnek-nietzsche-big-thinker-2.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Nietzsche187a.jpg/500px-Nietzsche187a.jpg",
         preview: "Explore Nietzsche's 'will to power' and how it challenges traditional morality and societal structures.",
       content: `
         Friedrich Nietzsche, a German philosopher of the 19th century, is widely recognized for his provocative ideas on morality, power, and the human condition. 
@@ -81,24 +81,31 @@ const blogPosts = [
 window.blogPosts = blogPosts;
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (document.querySelector("#blog-list")) {
-    const listContainer = document.querySelector(".list");
-    blogPosts.forEach(post => {
-      const el = document.createElement("article");
-      el.className = "blog-post";
-      el.innerHTML = `
-        <a href="post.html?id=${post.id}">
-          <img src="${post.image}" alt="${post.title}" />
-          <h2 class="title">${post.title}</h2>
-          <p class="date">${post.date}</p>
-          <p>${post.preview}</p>
-        </a>
-      `;
-      listContainer.appendChild(el);
-    });
+  const listContainer = document.querySelector(".list");
 
-    new List("blog-list", {
-      valueNames: ["title"]
-    });
-  }
+  blogPosts.forEach(post => {
+    const el = document.createElement("div");
+    el.className = "blog-post"; // can be used for styling
+    el.innerHTML = `
+      <h2 class="title">${post.title}</h2>
+      <p class="date">${post.date}</p>
+      <a href="post.html?id=${post.id}">
+        <img src="${post.image}" alt="${post.title}" />
+        <p>${post.preview}</p>
+        Read more
+      </a>
+    `;
+    listContainer.appendChild(el);
+  });
+
+  // Initialize List.js AFTER adding all posts
+  const options = {
+    valueNames: ['title'],
+    listClass: 'list'
+  };
+
+  const blogList = new List('blog-list', options);
+
+  // Optional: Log how many items were initialized
+  console.log("List initialized with", blogList.items.length, "items");
 });
